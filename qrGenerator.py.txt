@@ -1,0 +1,13 @@
+from IPython import get_ipython
+from IPython.display import display
+
+!pip install qrcode
+
+import qrcode
+from PIL import Image #Importing Image from PIL for opening the image
+
+image= qrcode.make(" https://www.brooklyn.edu/")
+image.save("wish.png")
+
+
+display(Image.open("wish.png")) 
